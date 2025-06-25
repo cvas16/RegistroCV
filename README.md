@@ -44,10 +44,15 @@ La plataforma se ha desarrollado utilizando PHP, Bootstrap 5, CSS y JavaScript p
 RegistroCV/
 │
 ├── trabajo/                # Carpeta principal de la aplicación
-│   ├── assets/             # Archivos estáticos (CSS, JS, imágenes)
-│   │   ├── css/
-│   │   ├── js/
-│   │   └── img/
+│   ├── config/             
+│   │   ├── app.php/
+│   │   ├── database.php/
+│   │── controller/
+|   |   |── AuthController.php
+|   |   |── PaginaController.php
+|   |   |── PostulacionController.php
+|   |   |── RRHHController.php
+|   |   |__ UsuarioController.php
 │   ├── database/           # Archivos de la base de datos (ej. .sql)
 │   ├── includes/           # Archivos PHP reutilizables (conexión, header, footer)
 │   ├── templates/          # Plantillas de Bootstrap y PHP
