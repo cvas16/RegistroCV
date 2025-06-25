@@ -93,7 +93,7 @@ RegistroCV/
 │   |
 |   ├── security/
 |   │   └── Security.php
-│
+│   |
 |   ├── service/
 |   │   ├── PostulacionService.php
 |   │   └── UsuarioService.php
