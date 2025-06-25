@@ -98,8 +98,8 @@ RegistroCV/
 |   │   ├── PostulacionService.php
 |   │   └── UsuarioService.php
 │   |
-|   └── uploads/
-│       └── (CVs y archivos subidos)
+|   ├── uploads/
+│   |    └── (CVs y archivos subidos)
 |   └──index.php
 ├── README.md
 └── 
