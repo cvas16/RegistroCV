@@ -47,24 +47,60 @@ RegistroCV/
 │   ├── config/             
 │   │   ├── app.php/
 │   │   ├── database.php/
+|   |
 │   │── controller/
 |   |   |── AuthController.php
 |   |   |── PaginaController.php
 |   |   |── PostulacionController.php
 |   |   |── RRHHController.php
-|   |   |__ UsuarioController.php
-│   ├── database/           # Archivos de la base de datos (ej. .sql)
-│   ├── includes/           # Archivos PHP reutilizables (conexión, header, footer)
-│   ├── templates/          # Plantillas de Bootstrap y PHP
-│   ├── index.php           # Página principal de la interfaz
-│   ├── login.php           # Página de inicio de sesión
-│   ├── register.php        # Página de registro de usuarios
-│   ├── dashboard.php       # Panel principal tras iniciar sesión
-│   ├── jobs.php            # Listado de ofertas de trabajo
-│   ├── apply.php           # Aplicar a un trabajo
-│   └── ...                 # Otros archivos y módulos
+|   |   └── UsuarioController.php
+|   |
+|   ├── css/
+│   │   |── homepage.css
+|   |   |── nosotros.css
+|   |   └── style.css
+|   |
+|   ├── database/
+|   |   └──cybertel.sql
+|   |
+|   ├── dto/
+│   |   ├── PostulacionDTO.php
+│   |   └── UsuarioDTO.php
+│   | 
+│   ├── img/
+│   │   └── (tus imágenes)
+|   |
+|   ├── includes/
+│   |   ├── footer.php
+│   |   └── header.php
+│   |  
+|   ├── model/
+│   |   ├── Postulacion.php
+│   |   └── Usuario.php
+│
+|   ├── public/
+│   |   ├── contactos.php
+│   |   ├── login.php
+│   |   ├── nosotros.php
+│   |   ├── panel_rrhh.php
+│   |   ├── perfil.php
+│   |   ├── registro.php
+│   |   ├── registro_cv.php
+|   |
+|   ├── repository/
+|   │   ├── PostulacionRepository.php
+|   │   └── UsuarioRepository.php
+│   |
+|   ├── security/
+|   │   └── Security.php
+│
+|   ├── service/
+|   │   ├── PostulacionService.php
+|   │   └── UsuarioService.php
+│   |
+|   └──index.php
 ├── README.md
-└── ...
+└── 
 ```
 
 ---
