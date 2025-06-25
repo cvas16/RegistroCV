@@ -77,7 +77,7 @@ RegistroCV/
 |   ├── model/
 │   |   ├── Postulacion.php
 │   |   └── Usuario.php
-│
+│   |
 |   ├── public/
 │   |   ├── contactos.php
 │   |   ├── login.php
@@ -98,6 +98,8 @@ RegistroCV/
 |   │   ├── PostulacionService.php
 |   │   └── UsuarioService.php
 │   |
+|   └── uploads/
+│       └── (CVs y archivos subidos)
 |   └──index.php
 ├── README.md
 └── 
