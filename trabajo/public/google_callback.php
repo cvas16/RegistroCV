@@ -3,8 +3,8 @@ require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../service/UsuarioService.php';
 
 $client = new Google_Client();
-$client->setClientId('576559080890-sg6i37dtvfsjutieqfb3d95acoh7kf4u.apps.googleusercontent.com');
-$client->setClientSecret('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');
+$client->setClientId('ID del cliente');
+$client->setClientSecret('Secreto del cliente');
 $client->setRedirectUri('http://localhost/trabajo/public/google_callback.php');
 
 if (isset($_GET['code'])) {
