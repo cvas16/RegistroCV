@@ -44,65 +44,22 @@ La plataforma se ha desarrollado utilizando PHP, Bootstrap 5, CSS y JavaScript p
 RegistroCV/
 │
 ├── trabajo/                # Carpeta principal de la aplicación
-│   ├── config/             
-│   │   ├── app.php/
-│   │   ├── database.php/
-|   |
-│   │── controller/
-|   |   |── AuthController.php
-|   |   |── PaginaController.php
-|   |   |── PostulacionController.php
-|   |   |── RRHHController.php
-|   |   └── UsuarioController.php
-|   |
-|   ├── css/
-│   │   |── homepage.css
-|   |   |── nosotros.css
-|   |   └── style.css
-|   |
-|   ├── database/
-|   |   └──cybertel.sql
-|   |
-|   ├── dto/
-│   |   ├── PostulacionDTO.php
-│   |   └── UsuarioDTO.php
-│   | 
-│   ├── img/
-│   │   └── (tus imágenes)
-|   |
-|   ├── includes/
-│   |   ├── footer.php
-│   |   └── header.php
-│   |  
-|   ├── model/
-│   |   ├── Postulacion.php
-│   |   └── Usuario.php
-│   |
-|   ├── public/
-│   |   ├── contactos.php
-│   |   ├── login.php
-│   |   ├── nosotros.php
-│   |   ├── panel_rrhh.php
-│   |   ├── perfil.php
-│   |   ├── registro.php
-│   |   ├── registro_cv.php
-|   |
-|   ├── repository/
-|   │   ├── PostulacionRepository.php
-|   │   └── UsuarioRepository.php
-│   |
-|   ├── security/
-|   │   └── Security.php
-│   |
-|   ├── service/
-|   │   ├── PostulacionService.php
-|   │   └── UsuarioService.php
-│   |
-|   ├── uploads/
-│   |    └── (CVs y archivos subidos)
-|   └──index.php
+│   ├── assets/             # Archivos estáticos (CSS, JS, imágenes)
+│   │   ├── css/
+│   │   ├── js/
+│   │   └── img/
+│   ├── database/           # Archivos de la base de datos (ej. .sql)
+│   ├── includes/           # Archivos PHP reutilizables (conexión, header, footer)
+│   ├── templates/          # Plantillas de Bootstrap y PHP
+│   ├── index.php           # Página principal de la interfaz
+│   ├── login.php           # Página de inicio de sesión
+│   ├── register.php        # Página de registro de usuarios
+│   ├── dashboard.php       # Panel principal tras iniciar sesión
+│   ├── jobs.php            # Listado de ofertas de trabajo
+│   ├── apply.php           # Aplicar a un trabajo
+│   └── ...                 # Otros archivos y módulos
 ├── README.md
-└── 
+└── ...
 ```
 
 ---
@@ -140,6 +97,55 @@ RegistroCV/
 - **Búsqueda de empleos:** Explora las vacantes disponibles según áreas de especialidad.
 - **Aplicar a empleos:** Envía tu postulación a las ofertas de interés.
 - **Panel de usuario:** Visualiza tus postulaciones y actualiza tu información.
+
+---
+
+## Autenticación con Google (Login con Google)
+
+El proyecto permite a los usuarios iniciar sesión con su cuenta de Google utilizando OAuth 2.0.  
+Sigue estos pasos para configurar y habilitar el login con Google en tu entorno local:
+
+### 1. Instalar Composer
+
+Composer es el gestor de dependencias de PHP. Si no lo tienes instalado, sigue este tutorial: [https://codigonaranja.com/tutorial-composer-php-dependencias](https://codigonaranja.com/tutorial-composer-php-dependencias)
+
+Pasos resumen:
+- Dirígete a la sección **Instalar composer** en el tutorial.
+- Descarga el instalador y ejecútalo (`Composer-setup.exe`).
+- Sigue el asistente hasta finalizar la instalación.
+
+### 2. Instalar la librería de Google
+
+En la carpeta raíz de tu proyecto, abre la terminal y ejecuta:
+
+```bash
+composer require google/apiclient-services
+```
+Esto instalará la carpeta `vendor/` y las dependencias necesarias para la autenticación con Google.
+
+### 3. Crear credenciales en Google Cloud Console
+
+1. Accede a [Google Cloud Console](https://console.cloud.google.com/).
+2. Crea un nuevo proyecto.
+3. Ve a **APIs y servicios > Credenciales**.
+4. Haz clic en **Crear credenciales** y selecciona **ID de cliente OAuth 2.0**.
+5. Completa los datos requeridos.
+6. En **URI de redirección autorizados**, coloca la URL a la que Google debe redirigir después de la autenticación.  
+   Ejemplo para entorno local:
+   ```
+   http://localhost/trabajo/public/google_callback.php
+   ```
+7. Guarda el **Client ID** y **Client Secret** generados; los necesitarás en tu código.
+
+### 4. Configuración en el proyecto
+
+- Las funcionalidades de login con Google están implementadas en los archivos:
+  - `googlelogin.php`
+  - `google_callback.php`
+- Debes colocar el Client ID y Client Secret de Google en la configuración de estos archivos, siguiendo la documentación o los comentarios en el código.
+
+> **Nota:**  
+> Si cambias la ruta de los archivos de callback, actualiza también el URI de redirección en Google Cloud Console.
 
 ---
 
