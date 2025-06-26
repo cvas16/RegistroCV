@@ -1,4 +1,5 @@
 /vendor/
+.trabajo/vendor/
 .env
 *.log
 .vscode/
