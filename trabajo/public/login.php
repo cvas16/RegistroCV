@@ -28,7 +28,9 @@
 
               <button class="btn btn-primary btn-lg w-100 mb-3" type="submit">Entrar</button>
               <hr class="my-4">
-              <button class="btn btn-danger btn-lg w-100 mb-3" type="button"><i class="bi bi-google me-2"></i> Iniciar con Google</button>
+              <a href="/trabajo/public/googlelogin.php" class="btn btn-danger btn-lg w-100 mb-3">
+                <i class="bi bi-google me-2"></i> Iniciar con Google
+              </a>
               <button class="btn btn-lg w-100" style="background-color: #3b5998; color: white;" type="button"><i class="bi bi-facebook me-2"></i> Iniciar con Facebook
               </button>
               <hr class="my-4">
