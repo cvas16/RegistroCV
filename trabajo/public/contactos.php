@@ -8,7 +8,14 @@
     background-repeat: no-repeat;
     min-height: 100vh; /* Para asegurar que siempre cubra toda la pantalla */
   }
-
+  .section-title,
+  .card-title{
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+  }
   /* Opcional: mejora la legibilidad del contenido sobre el fondo */
   .background-container {
     padding: 80px 0;
@@ -17,19 +24,30 @@
   .card, .ratio {
     background-color: rgba(255, 255, 255, 0.95);
   }
+  .main-content{
+    
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin: 40px;
+    padding: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
 </style>
 
+
 <div class="background-container">
-  <h1 class="mb-4">Contáctanos</h1>
+  <div class="main-content">
+  <h1 class="section-title mb-4">Contáctanos</h1>
 
   <div class="row">
     <div class="col-md-6">
       <div class="card shadow-sm mb-4">
         <div class="card-body">
-          <h5 class="card-title">Información de Contacto</h5>
+          <section class="card-title">Información de Contacto
           <p><strong>Teléfono:</strong> (01) 503 4940</p>
           <p><strong>Correo:</strong> <a href="mailto:asistente.adm@cyberteltec.com.pe">asistente.adm@cyberteltec.com.pe</a></p>
           <p><strong>Horario de atención:</strong><br>Lunes a Viernes, 9:00 a.m. – 6:00 p.m.</p>
+          </section>
           <div class="mt-3">
             <a href="https://www.facebook.com/people/Cybertel-Tecnology/61550918814610/" target="_blank" class="btn btn-primary me-2">
               <i class="bi bi-facebook"></i> Facebook
@@ -51,6 +69,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 
 <!-- Bootstrap Icons CDN -->
