@@ -1,4 +1,6 @@
 <?php include __DIR__ . '/../includes/header.php'; ?>
+<link href="/trabajo/css/perfil.css" rel="stylesheet">
+<div class="main-content">
 <h1>Registro de CV</h1>
 <p>Completa el formulario para postular a una vacante en CYBERTEL.</p>
 
@@ -40,6 +42,7 @@ if (isset($_GET['ok'])) {
   <div class="col-12">
     <button type="submit" class="btn btn-success">Enviar Postulación</button>
   </div>
+</div>
 </form>
 
 <?php include __DIR__ . '/../includes/footer.php'; ?>
