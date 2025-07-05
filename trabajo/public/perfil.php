@@ -5,8 +5,10 @@
         ¡Postulación eliminada correctamente!
     </div>
 <?php endif; ?>
+<link href="/trabajo/css/perfil.css" rel="stylesheet">
 
 <div class="container mt-5">
+    <div class="main-content">
     <h2>Mi Perfil</h2>
     <div class="card mb-4">
         <div class="card-body">
@@ -25,6 +27,7 @@
             <p><strong>Rol:</strong> <?= htmlspecialchars($usuario['rol'] ?? 'usuario') ?></p>
         </div>
     </div>
+    
 
     <?php if ($usuario['rol'] !== 'rrhh'): ?>
     <h3>Mis Postulaciones</h3>
@@ -72,6 +75,7 @@
         <p>No tienes postulaciones registradas.</p>
     <?php endif; ?>
     <?php endif; ?>
+    </div>
 </div>
 
 <?php include __DIR__ . '/../includes/footer.php'; ?>
